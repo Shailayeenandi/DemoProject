@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="83.44">
+    <testcase classname="feature to test borrowing calculator" name="Check the borrowing estimate after adding expenses" time="21.945">
+        <failure message="expected:&lt;$[449],000&gt; but was:&lt;$[508],000&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters Single 0 80000 10000 500 0 100 <ommitments> 10000..........passed
+And user clicks on workout how much i borrow button.........................passed
+Then user has borrowing estimate of $449,000................................failed
+And user closes the borrowing calculator page...............................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<$[449],000> but was:<$[508],000>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at Pages.Homepage.verifyborrowamount(Homepage.java:110)
+	at StepDefinitions.Homepagesteps.user_has_borrowing_estimate_of(Homepagesteps.java:42)
+	at ✽.user has borrowing estimate of $449,000(file:///C:/Users/shailayee/eclipse-workspace/DemoQAproject/src/test/resources/Features/Homepage.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="feature to test borrowing calculator" name="Check the start-over button clears the form" time="45.593">
+        <system-out><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters Single 0 80000 10000 500 0 100 <ommitments> 10000..........passed
+And user clicks on workout how much i borrow button.........................passed
+And User clicks on start-over button and clear the form.....................passed
+And user closes the borrowing calculator page...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test borrowing calculator" name="Check the start-over button clears the form 2" time="15.568">
+        <system-out><![CDATA[Given user is on borrowing calculator page..................................passed
+When user enters  1.........................................................passed
+And user clicks on workout how much i borrow button.........................passed
+Then user is getting an error message.......................................passed
+And user closes the borrowing calculator page...............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
